@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <span>
+        <a href="index.html">
+            <img class="back" src="https://img.icons8.com/wired/64/000000/back.png"/>
+        </a>
+    </span>
+    <div class="generate">
+        <p class="s-quotes">Generate quote</p>
+    </div>
+    <div class="q-container">
+       
+        <div class="display">
+            <span>
+                <img class="q-svg" src="https://img.icons8.com/wired/64/000000/quote-left.png"/>
+            </span>
+             <div class="text">
+                 <p class="S">  
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Ex, consequatur magnam dolores rem vero fugit, atque amet
+                 ipsa odit ab sed distinctio! Officiis, impedit beatae? 
+                 Exercitationem distinctio deserunt consectetur animi?</p>
+             </div>
+        </div>
+    </div>
+    
+        <a href="index.html">
+            <input type="button" value="Home">
+        </a>
+
+
+<script>
+    const suitsQuotes = [
+        `You want to change your life, change the way you think`,
+        `When you are back against the wall, break the goddam thing`,
+        `The only times succes comes before works is in the dictionary`,
+        `Win a no situation by rewritting the rules`
+]
+
+const link = document.querySelector('.got-link');
+const generate = document.querySelector('.s-quotes');
+const text = document.querySelector('.S');
+
+function suitsQuote() {
+
+    let result = Math.floor(Math.random() * suitsQuotes.length);
+    let randomRes = suitsQuotes[result];
+        
+    
+    text.textContent = randomRes;
+}
+
+
+generate.addEventListener('click', suitsQuote);
+</script>
+   
+</body>
+</html>

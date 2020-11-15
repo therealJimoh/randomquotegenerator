@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <span>
+        <a href="index.html">
+            <img class="back" src="https://img.icons8.com/wired/64/000000/back.png"/>
+        </a>
+    </span>
+    <div class="generate">
+        <p class="bill-quotes">Generate quote</p>
+    </div>
+    <div class="q-container">
+       
+        <div class="display">
+            <span>
+                <img class="q-svg" src="https://img.icons8.com/wired/64/000000/quote-left.png"/>
+            </span>
+             <div class="text">
+                 <p class="bill">  
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Ex, consequatur magnam dolores rem vero fugit, atque amet
+                 ipsa odit ab sed distinctio! Officiis, impedit beatae? 
+                 Exercitationem distinctio deserunt consectetur animi?</p>
+             </div>
+        </div>
+    </div>
+    
+        <a href="index.html">
+            <input type="button" value="Home">
+        </a>
+
+
+<script>
+    const billionsQuotes = [
+    `You get one life, so do it all`,
+    `The best way to bond with someone isn’t doing a favor, it’s asking for one.`,
+    `Hate is nature's most perfect energy source. It's endlessly renewable`,
+    `You don't try to be loyal, you just are, or you're not`,
+    `Better to play fast and aggressive with inferior material, than let
+    them be exposed later`
+]
+
+const link = document.querySelector('.got-link');
+const generate = document.querySelector('.bill-quotes');
+const text = document.querySelector('.bill');
+
+function billQuotes() {
+    
+
+    let result = Math.floor(Math.random() * billionsQuotes.length);
+    let randomRes = billionsQuotes[result];
+        
+    
+    text.textContent = randomRes;
+}
+
+
+generate.addEventListener('click', billQuotes);
+</script>
+   
+</body>
+</html>

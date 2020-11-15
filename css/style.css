@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #222A68;
+    font-family: monospace;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+h3 {
+    color: #fff;
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+p {
+    color: #fff;
+
+}
+
+h1 {
+    font-size: 35px;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Grande';
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    width: 80%;
+}
+
+.grid-content .quotes {
+    background: #654597;
+    margin: 5px 10px;
+    box-shadow: 3px 2px 7px .1px #AB81CD;
+    text-align: center;
+    text-decoration: none;
+    transition: all .6s ease-in-out;
+}
+
+.grid-content .quotes:hover {
+    cursor: pointer;
+    transform:scale(.9) ;
+}
+
+
+/* display page */
+.back {
+    margin-top: 15px;
+    width: 45px;
+}
+
+.q-container {
+    display: flex;
+    justify-content: center;
+}
+
+.generate {
+    width: 25%;
+    margin: 0 auto;
+    background: #AB81CD;
+    padding: 15px 0;
+    border: 1px solid #574AE2;
+    background: transparent;
+    transition: all .4s ease-in-out;
+}
+
+.generate:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.generate p {
+    text-align: center;
+    font-size: 25px;
+}
+
+.display {
+    /* background: #fff; */
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+span {
+    display: block;
+    margin: 0 30px;
+}
+
+
+.display .text {
+    margin: 0 auto;
+    width: 55%;
+    text-align: justify;
+    /* background: #AB81CD; */
+    padding: 15px 17px;
+}
+
+input[type="button"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 75px;
+    padding: 4px 16px;
+    background: transparent;
+    transition: all .9s ease;
+} 
+
+input[type="button"]:hover {
+    cursor: pointer;
+    background: #654597;
+}
+
+
+
+@media only screen and (max-width: 425px) {
+    .grid-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-content .quotes {
+        text-align: start;
+        background: none;
+        box-shadow: none;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        margin-top: 0px;
+    }
+
+    .display {
+        margin-top: 55px;
+        width: 100%;
+    }
+
+    .display .text {
+        width: 80%;
+    }
+
+    span {
+        margin: 0;
+    }
+
+    .generate {
+        border: none;
+    }
+
+    .generate p {
+        font-size: 12px;
+    }
+}
+

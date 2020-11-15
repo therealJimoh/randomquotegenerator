@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <span>
+        <a href="index.html">
+            <img class="back" src="https://img.icons8.com/wired/64/000000/back.png"/>
+        </a>
+    </span>
+    <div class="generate">
+        <p class="c-quotes">Generate quote</p>
+    </div>
+    <div class="q-container">
+       
+        <div class="display">
+            <span>
+                <img class="q-svg" src="https://img.icons8.com/wired/64/000000/quote-left.png"/>
+            </span>
+             <div class="text">
+                 <p class="C">  
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Ex, consequatur magnam dolores rem vero fugit, atque amet
+                 ipsa odit ab sed distinctio! Officiis, impedit beatae? 
+                 Exercitationem distinctio deserunt consectetur animi?</p>
+             </div>
+        </div>
+    </div>
+    
+        <a href="index.html">
+            <input type="button" value="Home">
+        </a>
+
+
+<script>
+    const criminalMindsQuotes = [
+        `Out of suffering have emerged the strongest souls.
+         The most massive characters are seared with scars.`,
+        `Find the place inside where there's joy, and the joy will burn out the pain.`,
+        `How people treat you is their karma; how you react is yours.`,
+        `There is a sacredness in tears. They are not the mark of weakness, but of power.
+         They are messengers of overwhelming grief and unspeakable love.`,
+         `Although the world is full of suffering, it is also full of overcoming it.`,
+         `Hope is the thing with feathers, that perches in the soul, and sings the
+         tune without the words, and never stops at all.`,
+        `The best and most beautiful things in the world cannot be seen or even touched—they must be felt with the heart.`,
+        `Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.`,
+        `Love is giving someone the ability to destroy you, but trusting them not to.`,
+        `Try again, fail again. Fail better.`,
+        `One of the deep secrets in life is that all that is really worth doing is what we do for others.`
+]
+
+const link = document.querySelector('.got-link');
+const generate = document.querySelector('.c-quotes');
+const text = document.querySelector('.C');
+
+function getCmQuotes() {
+    
+
+    let result = Math.floor(Math.random() * criminalMindsQuotes.length);
+    let randomRes = criminalMindsQuotes[result];
+        
+    
+    text.textContent = randomRes;
+}
+
+
+generate.addEventListener('click', getCmQuotes);
+</script>
+   
+</body>
+</html>

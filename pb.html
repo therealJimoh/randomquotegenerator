@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <span>
+        <a href="index.html">
+            <img class="back" src="https://img.icons8.com/wired/64/000000/back.png"/>
+        </a>
+    </span>
+    <div class="generate">
+        <p class="pb-quotes">Generate quote</p>
+    </div>
+    <div class="q-container">
+       
+        <div class="display">
+            <span>
+                <img class="q-svg" src="https://img.icons8.com/wired/64/000000/quote-left.png"/>
+            </span>
+             <div class="text">
+                 <p class="pb">  
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Ex, consequatur magnam dolores rem vero fugit, atque amet
+                 ipsa odit ab sed distinctio! Officiis, impedit beatae? 
+                 Exercitationem distinctio deserunt consectetur animi?</p>
+             </div>
+        </div>
+    </div>
+    
+        <a href="index.html">
+            <input type="button" value="Home">
+        </a>
+
+
+<script>
+    const prisonBreakQuotes = [
+    `I choose to have faith, because, without that,
+     I have nothing… It’s the only thing that’s keeping me going.`,
+     `Preparation can only take you so far. After that, you have to take a few leaps of faith.`,
+     `I don’t like getting attached to things if I know they won’t last.`,
+     `We are captives of our own identities, living in prisons of our own creation.`,
+     `Keep your friends close, your enemies closer!`,
+     `The secret to real power is to never betray your intentions, to wear
+     nothing on your sleeve, and to never let anyone see your face.`,
+     `Sometimes a man has to surrebder to faith. See what is has in store for him`,
+     `You want to screw something up? PUut a thousand people on it. You want to
+     get it done right? Put it in the hands of a few`,
+     `It's what's behind the eyes that counts.`
+]
+
+const link = document.querySelector('.got-link');
+const generate = document.querySelector('.pb-quotes');
+const text = document.querySelector('.pb');
+
+function pbQuotes() {
+    
+
+    let result = Math.floor(Math.random() * prisonBreakQuotes.length);
+    let randomRes = prisonBreakQuotes[result];
+        
+    
+    text.textContent = randomRes;
+}
+
+
+generate.addEventListener('click', pbQuotes);
+</script>
+   
+</body>
+</html>

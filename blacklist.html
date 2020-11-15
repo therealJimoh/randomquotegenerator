@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <span>
+        <a href="index.html">
+            <img class="back" src="https://img.icons8.com/wired/64/000000/back.png"/>
+        </a>
+    </span>
+    <div class="generate">
+        <p class="b-quotes">Generate quote</p>
+    </div>
+    <div class="q-container">
+       
+        <div class="display">
+            <span>
+                <img class="q-svg" src="https://img.icons8.com/wired/64/000000/quote-left.png"/>
+            </span>
+             <div class="text">
+                 <p class="B">  
+                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Ex, consequatur magnam dolores rem vero fugit, atque amet
+                 ipsa odit ab sed distinctio! Officiis, impedit beatae? 
+                 Exercitationem distinctio deserunt consectetur animi?</p>
+             </div>
+        </div>
+    </div>
+    
+        <a href="index.html">
+            <input type="button" value="Home">
+        </a>
+
+
+<script>
+
+const blacklistQuotes = [
+    `Wisdom is learning the boundaries of one’s designated lane`,
+    `Revenge isn’t a passion. It’s a disease. It eats at your mind and poisons your soul`,
+    `There’s a very fine line between love and hate.`,
+    `As my grandmother said, it’s good to have friends in low places.`,
+    `If you want your enemy to become your friend, create a problem for them and then solve it.`,
+    `You can’t do every silly thing you want to in life. You have to make choices and be happy with them.`,
+    `I had bullets, he had words. But when he was done talking for the first
+     time I truly understood which of those was more powerful.`,
+    `When you love someone, you have no control. That's what love is. Being Powerless`,
+    `In this world, there are no sides, only players`,
+    `Life is far too important a thing ever to talk seriously about`,
+    `The key to your sucess is a clear and consistent understanding of your own limitations`
+]
+
+const textB = document.querySelector('.B');
+const generateB = document.querySelector('.b-quotes');
+
+function getbBacklistQuotes() {
+    
+    let blacklistQ = Math.floor(Math.random() * blacklistQuotes.length);
+    let resultB = blacklistQuotes[blacklistQ];
+    // console.log(resultB);
+
+    textB.textContent = resultB;
+}
+
+generateB.addEventListener('click', getbBacklistQuotes);
+
+</script>
+   
+</body>
+</html>
